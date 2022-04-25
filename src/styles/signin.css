@@ -1,0 +1,6 @@
+#right_bg{
+    background-image: url('../Assets/welcome.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
