@@ -10,14 +10,10 @@ import HistoryOutlinedIcon from '@mui/icons-material/HistoryOutlined';
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import { useNavigate} from 'react-router-dom';
 
 const Dashboard = () => {
-  let token = localStorage.getItem('token')
-  axios.get('http://localhost:5000/loadDashboard', {headers: {
-      'Authorization': `Bearer ${token}`,
-      'Content-Type': 'application/json',
-      'Accept':'application/json'
-  }})
+
   return (
     <div className='flex md:flex-row justify-center flex-col h-screen shadow'>
       {/* left desktop nav */}
