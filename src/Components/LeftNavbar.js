@@ -1,13 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import CreditScoreOutlinedIcon from '@mui/icons-material/CreditScoreOutlined';
-import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import HistoryOutlinedIcon from '@mui/icons-material/HistoryOutlined';
-import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
-import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
-import Button from '@mui/material/Button';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import HistoryOutlinedIcon from '@mui/icons-material/HistoryOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
+import CreditScoreOutlinedIcon from '@mui/icons-material/CreditScoreOutlined';
 
 const LeftNavbar = () => {
   return (
@@ -18,7 +17,7 @@ const LeftNavbar = () => {
         <div className='mt-5 flex flex-col'>
           {/* <Button href='/dashboard' className='text-gray-500 px-3 py-2 text-sm flex items-center'><DashboardOutlinedIcon fontSize='small' /><span className='ml-3 mt-1'>Dashboard</span></Button> */}
           <Link to='/dashboard' className='text-gray-500 px-3 py-2 text-sm flex items-center active:text-gray-800'><DashboardOutlinedIcon fontSize='small' /><span className='ml-3'>Dashboard</span></Link>
-          <Link to='/dashboard' className='text-gray-500 px-3 py-2 text-sm mt-5 flex items-center'><SendOutlinedIcon fontSize='small' /><span className='ml-3'>Transfer</span></Link>
+          <Link to='/transfer' className='text-gray-500 px-3 py-2 text-sm mt-5 flex items-center'><SendOutlinedIcon fontSize='small' /><span className='ml-3'>Transfer</span></Link>
           <Link to='/dashboard' className='text-gray-500 px-3 py-2 text-sm mt-5 flex items-center'><CreditScoreOutlinedIcon fontSize='small' /><span className='ml-3'>Collect Loan</span></Link>
           <Link to='/dashboard' className='text-gray-500 px-3 py-2 text-sm mt-5 flex items-center'><EditOutlinedIcon fontSize='small' /><span className='ml-3'>Edit Profile</span></Link>
           <Link to='/dashboard' className='text-gray-500 px-3 py-2 text-sm mt-5 flex items-center'><HistoryOutlinedIcon fontSize='small'/><span className='ml-3'>Transaction</span></Link>

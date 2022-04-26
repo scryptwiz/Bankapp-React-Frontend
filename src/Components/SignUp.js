@@ -4,9 +4,10 @@ import TextField from '@mui/material/TextField';
 import { useFormik } from 'formik';
 import axios from 'axios';
 import * as Yup from 'yup';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
+    const navigate = useNavigate()
     const initialValues = {
         firstname: '',
         lastname: '',
@@ -17,6 +18,9 @@ const SignUp = () => {
     const onSubmit = values => {
         axios.post('http://localhost:5000/signup', values).then(res=>{
           console.log(res.data);
+          if (res.data.status === true) {
+              navigate('/')
+          }
         }).catch(err=>{
             console.log(err.message);
         })

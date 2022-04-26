@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Dashboard from './Dashboard'
 
-const UserGuard = () => {
+const DashboardGuard = () => {
   let token = localStorage.token
   const navigate = useNavigate()
   const [component, setComponent] = useState("")
@@ -40,4 +40,4 @@ const UserGuard = () => {
   )
 }
 
-export default UserGuard
+export default DashboardGuard

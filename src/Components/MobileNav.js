@@ -12,7 +12,7 @@ const MobileNav = () => {
           <DashboardOutlinedIcon fontSize='small'/>
           <p className='mt-1 font-medium'>Home</p>
         </Link>
-        <Link to='/dashboard' className='flex flex-col items-center justify-center text-xs text-gray-600'>
+        <Link to='/transfer' className='flex flex-col items-center justify-center text-xs text-gray-600'>
           <SendOutlinedIcon fontSize='small'/>
           <p className='mt-1 font-medium'>Transfer</p>
         </Link>

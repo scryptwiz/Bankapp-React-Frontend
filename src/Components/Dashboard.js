@@ -1,5 +1,4 @@
 import React from 'react'
-import axios from 'axios';
 import MobileNav from './MobileNav';
 import LeftNavbar from './LeftNavbar';
 import PersonIcon from '@mui/icons-material/Person';
@@ -10,7 +9,6 @@ import HistoryOutlinedIcon from '@mui/icons-material/HistoryOutlined';
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import { useNavigate} from 'react-router-dom';
 
 const Dashboard = () => {
 

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useFormik } from 'formik';
@@ -7,22 +7,19 @@ import * as Yup from 'yup';
 import { Link, useNavigate } from 'react-router-dom'
 
 const SignIns = () => {
-    const [loading, setloading] = useState(true)
     const navigate = useNavigate();
     const initialValues = {
         email: '',
         password: '',
     }
     const onSubmit = values => {
-        {loading?<span>Loading</span>:
         axios.post('http://localhost:5000/signin', values).then(res=>{
-            setloading(false)
             console.log(res.data );
-            if (res.data.status==true) {
+            if (res.data.status===true) {
                 const user_token = res.data.token
                 localStorage.setItem('token', user_token)
                 navigate('/dashboard');
-            } else if (res.data.status==false) {
+            } else if (res.data.status===false) {
                 console.log(res.data.message);
             } else if (res.data.err) {
                 console.log(res.data.err);
@@ -30,7 +27,6 @@ const SignIns = () => {
         }).catch((err) => {
             console.log(err.message);
         })}
-    }
     const validationSchema = Yup.object({
         email: Yup.string().email('Invalid Email Format').required('Field Required'),
         password: Yup.string().required('Field Required!'),
