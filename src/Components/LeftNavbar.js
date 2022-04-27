@@ -19,7 +19,7 @@ const LeftNavbar = () => {
           <Link to='/dashboard' className='text-gray-500 px-3 py-2 text-sm flex items-center active:text-gray-800'><DashboardOutlinedIcon fontSize='small' /><span className='ml-3'>Dashboard</span></Link>
           <Link to='/transfer' className='text-gray-500 px-3 py-2 text-sm mt-5 flex items-center'><SendOutlinedIcon fontSize='small' /><span className='ml-3'>Transfer</span></Link>
           <Link to='/dashboard' className='text-gray-500 px-3 py-2 text-sm mt-5 flex items-center'><CreditScoreOutlinedIcon fontSize='small' /><span className='ml-3'>Collect Loan</span></Link>
-          <Link to='/dashboard' className='text-gray-500 px-3 py-2 text-sm mt-5 flex items-center'><EditOutlinedIcon fontSize='small' /><span className='ml-3'>Edit Profile</span></Link>
+          <Link to='/editprofile' className='text-gray-500 px-3 py-2 text-sm mt-5 flex items-center'><EditOutlinedIcon fontSize='small' /><span className='ml-3'>Edit Profile</span></Link>
           <Link to='/dashboard' className='text-gray-500 px-3 py-2 text-sm mt-5 flex items-center'><HistoryOutlinedIcon fontSize='small'/><span className='ml-3'>Transaction</span></Link>
         </div>
         {/* bottom nav links */}

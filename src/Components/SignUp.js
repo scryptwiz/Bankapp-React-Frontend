@@ -16,7 +16,7 @@ const SignUp = () => {
         confirmpassword: ''
     }
     const onSubmit = values => {
-        axios.post('http://localhost:5000/signup', values).then(res=>{
+        axios.post('http://localhost:5000/api/signup', values).then(res=>{
           console.log(res.data);
           if (res.data.status === true) {
               navigate('/')

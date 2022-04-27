@@ -1,10 +1,10 @@
 import React from 'react'
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+import { Link, useNavigate } from 'react-router-dom'
 import { useFormik } from 'formik';
 import axios from 'axios';
 import * as Yup from 'yup';
-import { Link, useNavigate } from 'react-router-dom'
 
 const SignIns = () => {
     const navigate = useNavigate();
@@ -13,7 +13,7 @@ const SignIns = () => {
         password: '',
     }
     const onSubmit = values => {
-        axios.post('http://localhost:5000/signin', values).then(res=>{
+        axios.post('http://localhost:5000/api/signin', values).then(res=>{
             console.log(res.data );
             if (res.data.status===true) {
                 const user_token = res.data.token
